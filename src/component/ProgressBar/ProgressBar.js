@@ -15,7 +15,7 @@ export const ProgressBar = ({ step, progressPoints }) => {
                 return (
                     <React.Fragment key={ point }>
                         { /* eslint-disable-next-line */ }
-                        <ProgressPoint point={ index + 1 } active={ index + 1 <= step } title={ point } />
+                        <ProgressPoint point={ index + 1 } active={ index + 1 <= step } complete={ index + 2 <= step } title={ point } />
                     </React.Fragment>
                 );
             }
@@ -23,7 +23,7 @@ export const ProgressBar = ({ step, progressPoints }) => {
             return (
                 <React.Fragment key={ point }>
                     { /* eslint-disable-next-line */ }
-                    <ProgressPoint point={ index + 1 } active={ index + 1 <= step } title={ point } />
+                    <ProgressPoint point={ index + 1 } active={ index + 1 <= step } complete={ index + 2 <= step } title={ point } />
                     { /* eslint-disable-next-line */ }
                     <ProgressLine active={ index + 2 <= step } />
                 </React.Fragment>
